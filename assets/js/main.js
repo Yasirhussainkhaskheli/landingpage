@@ -45,8 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ---- Brands carousel clone for infinite scroll ---- */
   const track = document.querySelector('.brands-track');
   if (track) {
-    const items = track.innerHTML;
-    track.innerHTML = items + items;
+    const items = Array.from(track.children);
+    const originalWidth = track.scrollWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    const targetWidth = window.innerWidth * 2 + originalWidth;
+
+    track.style.setProperty('--brands-scroll-distance', `${originalWidth + gap}px`);
+
+    while (track.scrollWidth < targetWidth) {
+      items.forEach(item => {
+        track.appendChild(item.cloneNode(true));
+      });
+    }
   }
 
   /* ---- Simple lightbox for portfolio images ---- */

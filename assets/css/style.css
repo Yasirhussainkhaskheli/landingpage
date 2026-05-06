@@ -67,7 +67,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, #9bb93d 0%, #f37321 100%);
+  background: #fff;
+  color: #f37321;
+  border-color: #f37321;
   transform: translateY(-2px);
 }
 
@@ -91,11 +93,17 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   font-weight: 600;
   border-radius: 50px;
   padding: 15px 35px;
+  border: 1px solid transparent;
   box-shadow: 0 10px 12px -6px rgba(0,0,0,0.18);
   transition: all 0.3s ease;
 }
 
-.btn-yellow:hover { background: #9bb93d; transform: translateY(-2px); }
+.btn-yellow:hover {
+  background: #fff;
+  color: #f37321;
+  border: 1px solid #f37321;
+  transform: translateY(-2px);
+}
 
 /* ===========================
    HEADER
@@ -241,7 +249,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .hero-badge img {
   height: 87px;
   width: auto;
-  margin-bottom: -60px;
+  margin-bottom: -40px;
 }
 
 .hero-title-red {
@@ -266,6 +274,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   line-height: 1.2;
   color: #9ca3af;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .hero-desc {
@@ -342,19 +351,23 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
    FEATURES BAR
 =========================== */
 .features-bar {
-  background: #fff;
-  padding: 35px 0;
+  background: #f8f7fc;
+  padding: 28px 20px 48px;
 }
 
 .features-inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 24px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 34px 42px 28px;
+  background: #fff;
+  border: 1px solid rgba(47,52,58,0.08);
+  border-radius: 58px 10px 10px 10px;
+  box-shadow: 0 14px 34px rgba(47,52,58,0.16);
 }
 
 .feature-item {
@@ -362,22 +375,19 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 10px;
-  animation: float 3s ease-in-out infinite;
+  gap: 12px;
+  flex: 1;
+  min-width: 190px;
 }
 
-.feature-item:nth-child(2) { animation-delay: 0.5s; }
-.feature-item:nth-child(3) { animation-delay: 1s; }
-.feature-item:nth-child(4) { animation-delay: 1.5s; }
-
-.feature-item img { width: 52px; height: 46px; object-fit: contain; }
+.feature-item img { width: 50px; height: 50px; object-fit: contain; }
 
 .feature-item h3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  color: #2f343a;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: 0;
 }
 
 /* ===========================
@@ -386,6 +396,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .why-section {
   background: #fff;
   padding: 80px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .why-intro {
@@ -465,6 +477,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .testimonials-section {
   background: #2f343a;
   padding: 60px 0 70px;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonials-section .section-title {
@@ -558,7 +572,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 /* ===========================
    PORTFOLIO
 =========================== */
-.portfolio-section { padding: 80px 0; background: #fff; }
+.portfolio-section {
+  padding: 80px 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
 
 .section-heading {
   text-align: center;
@@ -640,8 +659,27 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
    PRICING
 =========================== */
 .pricing-section {
-  padding: 80px 0;
+  padding: 120px 0 80px;
   background: #f9f8fe;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 110px;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 36%, 0 72%);
+  pointer-events: none;
+}
+
+.pricing-section .section-heading,
+.pricing-cards,
+.pricing-cta {
+  position: relative;
+  z-index: 1;
 }
 
 .pricing-section .section-heading h2 { margin-bottom: 10px; }
@@ -683,9 +721,14 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .price-card:hover * { color: #fff !important; }
 .price-card:hover .price-tag { color: #fff !important; }
 .price-card:hover .btn-yellow { color: #000 !important; }
+.price-card:hover .btn-yellow:hover {
+  background: #fff;
+  border-color: #f37321;
+  color: #f37321 !important;
+}
 
 .price-card-header {
-  background: linear-gradient(135deg, #9bb93d 0%, #9ca3af 100%);
+  background: linear-gradient(135deg, #f37321 0%, #faa41a 100%);
   border-radius: 15px 15px 0 0;
   padding: 20px 15px;
   margin: -30px -20px 20px;
@@ -850,8 +893,20 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
    CTA BANNER / ALL-IN-ONE
 =========================== */
 .cta-banner {
-  background: linear-gradient(135deg, #9ca3af 0%, #9ca3af 100%);
-  padding: 70px 40px;
+  background: #2f343a;
+  padding: 110px 40px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 70px;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 24%, 0 100%);
+  pointer-events: none;
 }
 
 .cta-banner-inner {
@@ -861,6 +916,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-banner-text { flex: 1; min-width: 280px; }
@@ -917,6 +974,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   padding: 60px 0;
   background: #fff;
   overflow: hidden;
+  position: relative;
 }
 
 .brands-section h2 {
@@ -934,6 +992,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   gap: 40px;
   animation: scrollBrands 20s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .brands-track:hover { animation-play-state: paused; }
@@ -960,7 +1019,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 @keyframes scrollBrands {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(var(--brands-scroll-distance, 50%) * -1)); }
 }
 
 /* ===========================
@@ -969,6 +1028,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .global-section {
   background: #f9f8fe;
   padding: 80px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .global-inner {
@@ -1019,7 +1080,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
    FOOTER
 =========================== */
 .site-footer {
-  background: #9ca3af;
+  background: #2f343a;
   color: #fff;
   padding: 60px 0 25px;
 }
@@ -1110,8 +1171,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .social-icon:hover { background: #f37321; transform: translateY(-3px); }
 
 .footer-badges { display: flex; flex-direction: column; gap: 12px; }
-.footer-badges img { max-width: 150px; filter: brightness(0) invert(1) opacity(0.8); }
-.footer-badges img:hover { opacity: 1; filter: none; }
+.footer-badges img {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+.footer-badges img:hover { transform: translateY(-2px); }
 
 .footer-bottom {
   text-align: center;
@@ -1158,7 +1222,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   .hero-img-float-2 { max-width: 80px; }
 
   .why-cards { flex-direction: column; align-items: center; }
-  .features-inner { grid-template-columns: repeat(2, 1fr); }
+  .features-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 28px 20px;
+  }
+  .feature-item { min-width: 0; }
 
   .pricing-cards { grid-template-columns: 1fr; max-width: 400px; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -1180,6 +1249,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
   .btn { font-size: 15px; padding: 13px 25px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .gallery-grid img { height: 200px; }
-  .features-inner { flex-direction: column; }
+  .features-inner { grid-template-columns: 1fr; }
   .feature-item { width: 100%; }
 }
