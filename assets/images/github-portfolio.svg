@@ -1,0 +1,37 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1200" fill="#0D1117"/>
+  <rect x="44" y="44" width="712" height="1112" rx="36" fill="#161B22" stroke="#30363D" stroke-width="4"/>
+  <rect x="88" y="88" width="624" height="260" rx="28" fill="url(#paint0_linear)"/>
+  <circle cx="188" cy="218" r="74" fill="#F0F6FC"/>
+  <path d="M188 165C159 165 136 188 136 217C136 240 151 259 171 266C175 267 176 264 176 262V240C158 244 154 232 154 232C151 223 146 220 146 220C139 215 147 215 147 215C155 216 159 223 159 223C166 235 178 231 182 229C183 224 185 220 188 218C174 216 159 211 159 185C159 178 162 172 167 168C166 165 163 156 168 144C168 144 174 142 188 152C194 150 200 149 206 149C212 149 218 150 224 152C238 142 244 144 244 144C249 156 246 165 245 168C250 172 253 178 253 185C253 211 238 216 224 218C228 221 231 228 231 238V262C231 264 232 267 236 266C256 259 271 240 271 217C271 188 248 165 219 165H188Z" fill="#0D1117"/>
+  <text x="292" y="205" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">GitHub</text>
+  <text x="292" y="258" fill="#8B949E" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400">Code, ship, and collaborate</text>
+  <rect x="292" y="286" width="154" height="40" rx="20" fill="#238636"/>
+  <text x="339" y="313" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">New Repo</text>
+  <rect x="88" y="392" width="624" height="316" rx="26" fill="#0D1117" stroke="#30363D" stroke-width="3"/>
+  <text x="124" y="446" fill="#7EE787" font-family="Consolas, 'Courier New', monospace" font-size="26">README.md</text>
+  <text x="124" y="500" fill="#C9D1D9" font-family="Consolas, 'Courier New', monospace" font-size="28"># landing-page</text>
+  <text x="124" y="548" fill="#8B949E" font-family="Consolas, 'Courier New', monospace" font-size="24">&lt;p&gt;A polished homepage project&lt;/p&gt;</text>
+  <text x="124" y="596" fill="#8B949E" font-family="Consolas, 'Courier New', monospace" font-size="24">git clone repo</text>
+  <text x="124" y="644" fill="#8B949E" font-family="Consolas, 'Courier New', monospace" font-size="24">npm install</text>
+  <rect x="88" y="748" width="300" height="160" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="3"/>
+  <text x="120" y="804" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Pull Requests</text>
+  <text x="120" y="856" fill="#7EE787" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">128</text>
+  <text x="120" y="892" fill="#8B949E" font-family="Arial, Helvetica, sans-serif" font-size="22">Merged this month</text>
+  <rect x="412" y="748" width="300" height="160" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="3"/>
+  <text x="444" y="804" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Contributors</text>
+  <text x="444" y="856" fill="#58A6FF" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">24</text>
+  <text x="444" y="892" fill="#8B949E" font-family="Arial, Helvetica, sans-serif" font-size="22">Active collaborators</text>
+  <rect x="88" y="948" width="624" height="156" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="3"/>
+  <text x="120" y="1008" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Latest Activity</text>
+  <circle cx="142" cy="1056" r="10" fill="#238636"/>
+  <text x="168" y="1064" fill="#C9D1D9" font-family="Arial, Helvetica, sans-serif" font-size="24">Feature branch merged into <tspan font-weight="700">main</tspan></text>
+  <circle cx="142" cy="1100" r="10" fill="#58A6FF"/>
+  <text x="168" y="1108" fill="#C9D1D9" font-family="Arial, Helvetica, sans-serif" font-size="24">Deployment workflow passed successfully</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="88" y1="88" x2="712" y2="348" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F6FEB"/>
+      <stop offset="1" stop-color="#238636"/>
+    </linearGradient>
+  </defs>
+</svg>
